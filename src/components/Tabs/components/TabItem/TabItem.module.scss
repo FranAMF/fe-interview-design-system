@@ -1,0 +1,21 @@
+.TabItem {
+  &--pill {
+  }
+  &--underline {
+  }
+  &--selected {
+  }
+  @media (max-width: 768px) {
+    &--pill {
+    }
+
+    &--underline {
+    }
+  }
+  &:hover {
+  }
+  &:active {
+  }
+  &:focus-visible {
+  }
+}
