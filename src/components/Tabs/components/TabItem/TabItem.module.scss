@@ -1,8 +1,8 @@
-@use "../../../../styles/tokens.scss" as *;
+@use "@/styles/tokens.scss" as *;
 
 .TabItem {
   display: inline-flex;
-  gap: 8px;
+  gap: $spacing-2xs;
   align-items: center;
   justify-content: center;
   font-size: $font-body-m;
@@ -32,7 +32,7 @@
     }
 
     &.selected {
-      background-color: $main-color-tabs;
+      background-color: $main-color-pill-underline;
       color: $pill-selected-color;
       border: none;
       &:hover {
@@ -43,7 +43,7 @@
         background-color: $pill-selected-active;
       }
       &:focus-visible {
-        outline-color: $main-color-tabs;
+        outline-color: $main-color-pill-underline;
       }
     }
   }
@@ -52,7 +52,7 @@
     position: relative;
     padding: $spacing-0;
     background-color: $default-background;
-    color: $main-color-tabs;
+    color: $main-color-pill-underline;
 
     .underline {
       position: absolute;
@@ -72,21 +72,25 @@
 
     &.selected {
       .underline {
-        background-color: $main-color-tabs;
+        background-color: $main-color-pill-underline;
       }
     }
 
     &:focus-visible {
       outline: 2px solid $outline-not-selected-color;
       outline-offset: 2px;
-      border-radius: $spacing-4xs;
+      border-radius: 2px;
     }
 
     &.selected:focus-visible {
-      outline-color: $main-color-tabs;
+      outline-color: $main-color-pill-underline;
     }
   }
   @media (max-width: 768px) {
     min-height: $standard-height-mobile;
+
+    &--pill {
+      padding: $spacing-0 $spacing-xs;
+    }
   }
 }

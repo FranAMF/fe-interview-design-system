@@ -1,17 +1,17 @@
-@use "../../../../styles/tokens.scss" as *;
+@use "@/styles/tokens.scss" as *;
 
 .Badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
-
   font-size: $font-body-s;
   line-height: $line-height-body;
   font-weight: $font-weight;
   font-family: $font-family;
   border-radius: 12px;
   padding: $spacing-3xs $spacing-2xs;
+
   &--neutral {
     background-color: $neutral-color;
   }

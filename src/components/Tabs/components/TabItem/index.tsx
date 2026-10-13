@@ -1,5 +1,5 @@
 import { TabsItems } from "../../types";
-import Badge from "../Badge";
+import Badge from "./components/Badge";
 import styles from "./TabItem.module.scss";
 
 type TabItemProps = Pick<TabsItems, "label" | "badge"> & {

@@ -9,11 +9,16 @@ export default function Tabs({ defaultActiveKey, items, variant }: TabsProps) {
   const handleSelectTab = (key: string) => {
     setSelected(key);
   };
+  console;
+  const className = [
+    styles.Tabs,
+    styles[`Tabs--${variant.toLowerCase()}`],
+  ].join(" ");
 
   const activeItem = items.find((item) => item.key === selected);
   return (
     <div className={styles.MainContainer}>
-      <div className={styles.Tabs}>
+      <div className={className}>
         {" "}
         {items.map((item, index) => {
           return (
