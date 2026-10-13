@@ -9,7 +9,7 @@ export default function Tabs({ defaultActiveKey, items, variant }: TabsProps) {
   const handleSelectTab = (key: string) => {
     setSelected(key);
   };
-  console;
+
   const className = [
     styles.Tabs,
     styles[`Tabs--${variant.toLowerCase()}`],
