@@ -1,15 +1,15 @@
-type TabsItems = {
+export type TabsItems = {
   key: string;
   label: string;
-  variant: "PILL" | "UNDERLINE";
   children: React.ReactNode;
   badge?: {
-    label: string;
+    labelBadge: string;
     variant?: "NEUTRAL" | "POSITIVE" | "NEGATIVE";
   };
 };
 
 export type TabsProps = {
   items: TabsItems[];
-  defaultActiveKey?: string;
+  variant: "PILL" | "UNDERLINE";
+  defaultActiveKey: string;
 };

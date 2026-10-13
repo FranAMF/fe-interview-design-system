@@ -11,12 +11,23 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
+    defaultActiveKey: "profile",
+    variant: "UNDERLINE",
     items: [
       {
         key: "profile",
         label: "Profile",
-        variant: "PILL",
-        children: <div></div>,
+        children: <div>Profile children</div>,
+      },
+      {
+        key: "label",
+        label: "Label",
+        children: <div>Label children</div>,
+      },
+      {
+        key: "user",
+        label: "User",
+        children: <div>User children</div>,
       },
     ],
   },
