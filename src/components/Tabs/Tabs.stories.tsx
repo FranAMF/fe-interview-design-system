@@ -18,6 +18,10 @@ export const Default: Story = {
         key: "profile",
         label: "Profile",
         children: <div>Profile children</div>,
+        badge: {
+          label: "Warning",
+          variant: "NEGATIVE",
+        },
       },
       {
         key: "label",

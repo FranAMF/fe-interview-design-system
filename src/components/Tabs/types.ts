@@ -3,7 +3,7 @@ export type TabsItems = {
   label: string;
   children: React.ReactNode;
   badge?: {
-    labelBadge: string;
+    label: string;
     variant?: "NEUTRAL" | "POSITIVE" | "NEGATIVE";
   };
 };

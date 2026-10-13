@@ -1,4 +1,5 @@
 import { TabsItems } from "../../types";
+import Badge from "../Badge";
 import styles from "./TabItem.module.scss";
 
 type TabItemProps = Pick<TabsItems, "label" | "badge"> & {
@@ -22,10 +23,13 @@ export default function TabItem({
 
   return (
     <button type="button" onClick={onClick} className={className}>
-      {label}
-      {style === "UNDERLINE" && (
-        <span className={styles.underline} aria-hidden="true" />
-      )}
+      <div>
+        {label}
+        {style === "UNDERLINE" && (
+          <span className={styles.underline} aria-hidden="true" />
+        )}
+      </div>
+      {badge && <Badge label={badge.label} variant={badge.variant} />}
     </button>
   );
 }
