@@ -1,7 +1,6 @@
-type TabsItems = {
+export type TabsItems = {
   key: string;
   label: string;
-  variant: "PILL" | "UNDERLINE";
   children: React.ReactNode;
   badge?: {
     label: string;
@@ -11,5 +10,6 @@ type TabsItems = {
 
 export type TabsProps = {
   items: TabsItems[];
-  defaultActiveKey?: string;
+  variant: "PILL" | "UNDERLINE";
+  defaultActiveKey: string;
 };

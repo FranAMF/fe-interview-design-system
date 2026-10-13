@@ -1,5 +1,27 @@
+@use "@/styles/tokens.scss" as *;
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
 .Tabs {
   display: inline-flex;
   flex-direction: row;
-  background-color: red;
+  &--pill {
+    gap: $spacing-xs;
+  }
+  &--underline {
+    gap: $spacing-xl;
+  }
+
+  @media (max-width: 768px) {
+    &--pill {
+      gap: $spacing-2xs;
+    }
+    &--underline {
+      gap: $spacing-l;
+    }
+  }
 }
