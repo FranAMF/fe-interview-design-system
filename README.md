@@ -13,12 +13,6 @@ I also chose not to create a separate constants file. There are only a few value
 
 In general, I prefer keeping things as simple as possible. I find that straightforward code is usually easier to understand, maintain, and extend when requirements change.
 
-
-## Getting Started
-
-pnpm install
-pnpm dev
-
 # Storybook
 pnpm storybook
 
