@@ -1,27 +1,27 @@
-# Frontend Interview - Design System
+# Tabs — Design System Component
 
-Hey 👋
+Hola! 😊
 
-This is the base repository for the home test. The repository is created with `vite` and is empty, but contains some packages already installed, in particular:
+This is a reusable and responsive Tabs component built with React, TypeScript, and SCSS as part of a frontend technical assessment.
+The component supports Pill and Underline variants, optional status badges, and accessible tab semantics.
 
-- `react`
-- `storybook`
-- `vitest`
+# Technical Decisions
 
-## Install and run
+I decided to keep the implementation simple and easy to follow. Instead of using a compound component pattern, I went with an items-based approach where the Tabs component handles the state and rendering internally. For this particular use case, I felt it was a more straightforward solution without adding unnecessary complexity.
 
-```bash
-# Install dependencies
-# This project use `pnpm` as package manager, but you can use also `npm` or `yarn`.
+I also chose not to create a separate constants file. There are only a few values that I would normally extract (such as NEGATIVE, POSITIVE ... ), so I didn't feel it was necessary at this stage. In a larger project, I would probably organize these differently.
+
+In general, I prefer keeping things as simple as possible. I find that straightforward code is usually easier to understand, maintain, and extend when requirements change.
+
+
+## Getting Started
+
 pnpm install
-
-# And run the project
 pnpm dev
 
-# Optional: Run Storybook
+# Storybook
 pnpm storybook
-```
 
-## Figma file
+# Testing
+pnpm test
 
-The figma file of the home test is available [here](https://www.figma.com/design/OclakAGLSXDoMKLFvwLNMP/%F0%9F%92%BB-Design-System-Home-Test---Tabs-Component?node-id=0-1&t=4pG7NN6HKxgxroDz-1).
