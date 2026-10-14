@@ -22,7 +22,7 @@ export default function TabItem({
   ].join(" ");
 
   return (
-    <button type="button" onClick={onClick} className={className}>
+    <button type="button" onClick={onClick} className={className} role="tab">
       <div>
         {label}
         {style === "UNDERLINE" && (
