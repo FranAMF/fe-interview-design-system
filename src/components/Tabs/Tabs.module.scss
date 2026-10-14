@@ -7,8 +7,11 @@
 }
 
 .Tabs {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
+  overflow-x: auto;
+  padding: 4px;
+
   &--pill {
     gap: $spacing-xs;
   }

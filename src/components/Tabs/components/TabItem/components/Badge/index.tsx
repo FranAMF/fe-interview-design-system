@@ -5,12 +5,16 @@ export default function Badge({
   variant = "NEUTRAL",
 }: {
   label: string;
-  variant: "NEUTRAL" | "POSITIVE" | "NEGATIVE" | undefined;
+  variant?: "NEUTRAL" | "POSITIVE" | "NEGATIVE";
 }) {
   const className = [
     styles.Badge,
     styles[`Badge--${variant.toLowerCase()}`],
   ].join(" ");
 
-  return <div className={className}>{label}</div>;
+  return (
+    <div data-testid="badge" className={className}>
+      {label}
+    </div>
+  );
 }
