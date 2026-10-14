@@ -16,24 +16,23 @@ export default function Tabs({ defaultActiveKey, items, variant }: TabsProps) {
   ].join(" ");
 
   const activeItem = items.find((item) => item.key === selected);
+
   return (
     <div className={styles.MainContainer}>
-      <div className={className}>
-        {" "}
-        {items.map((item, index) => {
-          return (
-            <TabItem
-              key={index.toString()}
-              style={variant}
-              label={item.label}
-              badge={item.badge}
-              selected={selected === item.key}
-              onClick={() => handleSelectTab(item.key)}
-            />
-          );
-        })}
+      <div className={className} role="tablist" aria-label="Sections">
+        {items.map((item) => (
+          <TabItem
+            key={item.key}
+            style={variant}
+            label={item.label}
+            badge={item.badge}
+            selected={selected === item.key}
+            onClick={() => handleSelectTab(item.key)}
+          />
+        ))}
       </div>
-      <div>{activeItem?.children}</div>
+
+      <div role="tabpanel">{activeItem?.children}</div>
     </div>
   );
 }
